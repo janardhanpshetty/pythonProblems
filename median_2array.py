@@ -14,12 +14,13 @@ def main(a, b):
         elif len(b) == j:
             result += a[i:]
             break
-        elif a[i] < a[j]:
+        elif a[i] < b[j]:
             result.append(a[i])
             i += 1
         else:
             result.append(b[j])
-            j += 1 
+            j += 1
+    print("res=", result)
     reslen = len(result)
     mid = reslen / 2
     if reslen % 2 != 0:
@@ -29,7 +30,7 @@ def main(a, b):
         return(medi)
 
 if __name__ == "__main__":
-    a = [2, 13, 17, 30, 45]
-    b = [1, 12, 15, 26, 38]
+    a = [2, 13, 17, 18, 19, 20]
+    b = [1, 5, 7, 9, 26, 38]
     res = main(a, b)
     print(res)
