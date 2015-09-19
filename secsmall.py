@@ -2,8 +2,8 @@
 from __future__ import print_function
 
 
-def secsmall(a, n, k):
-    ''' Find k smallest elements '''
+def secsmall(a, n):
+    ''' Find smallest and second smallest element of array '''
     first = second = a[0]
     for i in range(1, n):
         if a[i] < first:
