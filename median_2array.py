@@ -22,19 +22,18 @@ def main(a, b):
         else:
             result.append(b[j])
             j += 1
-    print("res=", result)
     reslen = len(result)
     mid = reslen / 2
     if reslen % 2 != 0:
         return(result[mid])
     else:
-        medi = float((result[mid] + result[mid - 1]) / 2)
+        medi = (float(result[mid]) + float(result[mid - 1])) / 2.0
         return(medi)
 
 if __name__ == "__main__":
     #a = [2, 13, 17, 18, 19, 20]
     #b = [1, 5, 7, 9, 26, 38]
-    a = []
-    b = []
+    a = [1]
+    b = [2]
     res = main(a, b)
     print(res)
