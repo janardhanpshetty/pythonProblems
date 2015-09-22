@@ -7,6 +7,8 @@ def main(a, b):
     i = j = k = 0
     result = []
     totlen = len(a) + len(b)
+    if totlen == 0:
+        return 0
     while len(result) != totlen:
         if len(a) == i:
             result += b[j:]
@@ -30,7 +32,9 @@ def main(a, b):
         return(medi)
 
 if __name__ == "__main__":
-    a = [2, 13, 17, 18, 19, 20]
-    b = [1, 5, 7, 9, 26, 38]
+    #a = [2, 13, 17, 18, 19, 20]
+    #b = [1, 5, 7, 9, 26, 38]
+    a = []
+    b = []
     res = main(a, b)
     print(res)
